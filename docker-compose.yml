@@ -1,0 +1,6 @@
+version: "3"
+service:
+  elixir-db:
+  image: postgres:12
+  ports:
+    - "5432:5432"
