@@ -18,6 +18,10 @@ config :lhnpay, LhnpayWeb.Endpoint,
   pubsub_server: Lhnpay.PubSub,
   live_view: [signing_salt: "uHKAUw3j"]
 
+config :lhnpay, Lhnpay.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
